@@ -1,5 +1,4 @@
 <?php
-
     $conn = mysqli_connect(
         "127.0.01",
         "root",
@@ -8,8 +7,7 @@
         3306
     );
 
-    if(isset($conn)){
-        echo "DB is connected";
+    if(!$conn){
+        die("Conexión fallida ".mysqli_connect_error());
     }
-
 ?>
