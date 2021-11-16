@@ -1,20 +1,26 @@
 <?php include('conexion.php') ?>
+<?php include('includes/header.php')?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
+<?php
+    $query = mysqli_query($conn,"SELECT *FROM cliente");
+?>
 
-<body>
+    <table> 
+        <tr> 
+            <th>I</th>
+            <th>Nombre</th>
+            <th>Clave</th>
 
+            <?php
+                while($item=mysqli_fetch_array($query)){
+                    echo"<tr>";
+                        echo "<td>".$item['id_cliente'] ."</td>";
+                        echo "<td>".$item['nom_cliente'] ."</td>";
+                        echo "<td>".$item['clave_estado'] ."</td>";
+                    echo"</tr>";
+                }
+            ?>
+        </tr>
+    </table>
 
-
-
-</body>
-
-
-</html>
+<?php include('includes/footer.php') ?>
