@@ -17,19 +17,23 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="nav-link logo">Northwind</a>
-            <ul class="nav-menu">
-                <li class="nav-item"> 
-                    <a href="#" class="link nav-link" >Dashboard </a> 
-                </li>
-                <li class="nav-item"> 
-                    <a href="#" class="link nav-link" >Datos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="link nav-link" >Otro</a> 
-                </li>
-            </ul>
-        </nav>
+    
+    <header>
+            <nav class="nav">
+                
+                <ul class="nav_links">
+                    <li> 
+                        <a href="#">Dashboard </a> 
+                    </li>
+                    <li> 
+                        <a href="#">Datos</a>
+                    </li>
+                    <li >
+                        <a href="#">Otro</a> 
+                    </li>
+                </ul>
+            </nav>
+
+        <div class="clearfix"> </div>
+
     </header>

@@ -1,6 +1,8 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
+    background-color: darkgray;
 }
 
 body{
@@ -11,14 +13,13 @@ body{
 .header{
     background-color: darkcyan;
     height: 75px;
-    /*fijar la posicion*/
+   
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
 }
 
-/*Acomodar menu de navegacion*/
 .nav{
     display:flex;
     justify-content: space-between;
@@ -33,18 +34,18 @@ body{
     font-size: 30px;
     font-weight: bold;
     padding: 0 20px;
-    /*centrar texto*/
+   
     line-height:75px;
 }
 
-/*elementos del menu en horizontal*/
+
 .nav-menu{
     display: flex;
     margin-right: 40px;
     list-style: none;
 }
 
-/*estilo a los li*/
+
 .nav-item{
     font-size: 18px;
     margin: 0 10px;
@@ -63,10 +64,15 @@ body{
     border-radius: 5px;
 }
 
-#footer{
-    background-color:darkcyan;
-    margin-top: auto;
-    text-transform: capitalize;
-    color: white;
-    
+.total{
+    width: 150px;
+    height: 120px;
+    padding: 10px 12px;
+    background-color: seashell;
+    border-radius: 4px;
+}
+
+.total span{
+    padding-bottom: 10px;
+    background-color: seashell;
 }

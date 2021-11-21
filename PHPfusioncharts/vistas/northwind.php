@@ -12,7 +12,11 @@ class Northwind{
                     "subCaption" => "Northwind Database",
                     "xAxisName" => "Vendedores",
                     "yAxisName" => "Ventas (MDP)",
+                    "palettecolors" => "2874A6,EC7063,BB8FCE,16A085,F8C471",
                     "showValues" => "0",
+                    "showBorder" => "1",
+                    "borderColor" => "E5E5E5",
+                    "borderThickness" => 5,
                     "theme" => "candy"
                 )
             );
@@ -32,7 +36,6 @@ class Northwind{
         return $jsonEncodedData;
     }
 
-
     function top_productos($cnx){
         $query = mysqli_query($cnx, "SELECT *FROM top_productos");
 
@@ -43,9 +46,11 @@ class Northwind{
                     "subCaption" => "Northwind Database",
                     "xAxisName" => "Productos",
                     "yAxisName" => "Ventas (MDP)",
-                    "palettecolors" => "60200B,FFFF00,FE0041,F2F780,2FFE65",
+                    "palettecolors" => "5499C7",
                     "showValues" => "0",
-                    //"bgColor" => "#088B84",
+                    "showBorder" => "1",
+                    "borderColor" => "E5E5E5",
+                    "borderThickness" => 5,
                     "theme" => "candy"
                 )
             );
@@ -76,9 +81,11 @@ class Northwind{
                     "subCaption" => "Northwind Database",
                     "xAxisName" => "Compañia",
                     "yAxisName" => "Ventas (MDP)",
-                    "palettecolors" => "60200B,FFFF00,FE0041,F2F780,2FFE65",
+                    "palettecolors" => "FFFF00,28B463,FE0041,F2F780,2FFE65,2874A6,EC7063,BB8FCE,16A085,F8C471,5D6D7E,D35400",
+                    "showBorder" => "1",
                     "showValues" => "0",
-                    //"bgColor" => "#088B84",
+                    "borderColor" => "E5E5E5",
+                    "borderThickness" => 5,
                     "theme" => "candy"
                 )
             );
@@ -110,9 +117,14 @@ class Northwind{
                     "subCaption" => "Northwind Database",
                     "xAxisName" => "Estado",
                     "yAxisName" => "Ventas (MDP)",
-                    "palettecolors" => "60200B,FFFF00,FE0041,F2F780,2FFE65",
-                    "showValues" => "0",
-                    //"bgColor" => "#088B84",
+                    "palettecolors" => "2874A6,BDB76B,7B68EE,FF8C00,C71585,EC7063,BB8FCE,16A085,E74C3C,F8C471,DC143C",
+                    "showValues" => "1",
+                    "showLabels" => "0",
+                    "showBorder" => "1",
+                    "borderColor" => "E5E5E5",
+                    "borderThickness" => 5,
+                    "pieRadius" => 180,
+                    "numberPrefix" => "$",
                     "theme" => "candy"
                 )
             );
@@ -133,12 +145,12 @@ class Northwind{
         return $jsonEncodedData;
     }
 
+    function ventas_totales($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM ventas_totales");
+        $r =  mysqli_fetch_array($query);
+        return $r['TOTAL'];
+    }
 
 }
-
-
-
-
-
 
 ?>
