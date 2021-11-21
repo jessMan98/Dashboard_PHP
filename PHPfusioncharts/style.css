@@ -2,77 +2,89 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    background-color: darkgray;
+    
 }
 
 body{
     font-family: sans-serif;
-    padding: 90px 0;
+    background-color: #b7bdbd;
 }
 
 .header{
-    background-color: darkcyan;
-    height: 75px;
-   
-    position: fixed;
+    background-color: #353837;
+    height: 90px;
     width: 100%;
-    top: 0;
-    left: 0;
 }
 
-.nav{
-    display:flex;
-    justify-content: space-between;
+.navigation{
+    display: flex;
+    justify-content: space-between;    
 }
 
 .nav-link{
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
 }
 
 .logo{
     font-size: 30px;
     font-weight: bold;
-    padding: 0 20px;
-   
-    line-height:75px;
+    padding: 0 40px;
+    line-height: 80px;
 }
-
 
 .nav-menu{
     display: flex;
     margin-right: 40px;
     list-style: none;
-}
-
-
-.nav-item{
-    font-size: 18px;
-    margin: 0 10px;
-    line-height: 75px;
-    text-transform: uppercase;
+    line-height: 80px;
     width: max-content;
 }
 
-.link:hover{
-    background-color:darkslategray;
-    transition: 0.5s;   
+.nav-menu-item{
+    font-size: 20px;
+    margin: 0 10px;
 }
 
-.link{
-    padding: 8px 10px;
+.nav-menu-link:hover{
+    background-color: #6A7472;
+    transition: 1s;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
     border-radius: 5px;
 }
 
-.total{
-    width: 150px;
-    height: 120px;
-    padding: 10px 12px;
-    background-color: seashell;
-    border-radius: 4px;
+
+.contenedor{
+    width: 450px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color:whitesmoke;
+    margin: 15px 15px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.total span{
-    padding-bottom: 10px;
-    background-color: seashell;
+.contenedor div{
+    background-color:whitesmoke;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;  
+}
+
+.container div{
+    padding: 5px 5px;
+    background-color: #182f30;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
