@@ -20,16 +20,16 @@
     
     <header class="header">
         <nav class="navigation">
-            <a href="#" class="logo nav-link">DataWarehouse</a>
+            <a href="#" class="logo nav-link">Northwind</a>
                 <ul class="nav-menu"> 
                     <li class="nav-menu-item ">
-                        <a href="" class="nav-menu-link nav-link">Dashboard</a>
+                        <a href="index.php" class="nav-menu-link nav-link">Dashboard</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="" class="nav-menu-link nav-link">Datos</a>
+                        <a href="" class="nav-menu-link nav-link">Update Data</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="" class="nav-menu-link nav-link">Ingresar Datos</a>
+                        <img src="logo.jpg" alt="CUCEI">
                     </li>
                 </ul>
             </nav>
