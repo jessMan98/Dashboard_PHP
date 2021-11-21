@@ -13,9 +13,11 @@ class Northwind{
                     "xAxisName" => "Vendedores",
                     "yAxisName" => "Ventas (MDP)",
                     "palettecolors" => "2874A6,EC7063,BB8FCE,16A085,F8C471",
+                    "numberPrefix" => "$",
                     "showValues" => "0",
                     "showBorder" => "1",
                     "borderColor" => "E5E5E5",
+                    "captionAlignment" => "left",
                     "borderThickness" => 5,
                     "theme" => "candy"
                 )
@@ -47,6 +49,7 @@ class Northwind{
                     "xAxisName" => "Productos",
                     "yAxisName" => "Ventas (MDP)",
                     "palettecolors" => "5499C7",
+                    "numberPrefix" => "$",
                     "showValues" => "0",
                     "showBorder" => "1",
                     "borderColor" => "E5E5E5",
@@ -86,6 +89,7 @@ class Northwind{
                     "showValues" => "0",
                     "borderColor" => "E5E5E5",
                     "borderThickness" => 5,
+                    "numberPrefix" => "$",
                     "theme" => "candy"
                 )
             );

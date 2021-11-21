@@ -12,10 +12,10 @@
     $jeE = $obj->ventas_estado($conn);
     $jeT = $obj->ventas_totales($conn);
 
-    $columnChartV = new FusionCharts("bar2D", "myFirstChart" , 700, 400, "chart-1", "json",$jeV);
-    $columnChartP = new FusionCharts("line", "mySecondChart" , 700, 400, "chart-2", "json",$jeP);
-    $columnChartC = new FusionCharts("pareto2D", "myThirdChart" , 700, 400, "chart-3", "json",$jeC);
-    $columnChartE = new FusionCharts("doughnut3d", "myFourChart" , 700, 400, "chart-4", "json",$jeE);
+    $columnChartV = new FusionCharts("bar2D", "myFirstChart" , 650, 430, "chart-1", "json",$jeV);
+    $columnChartP = new FusionCharts("line", "mySecondChart" , 650, 430, "chart-2", "json",$jeP);
+    $columnChartC = new FusionCharts("pareto2D", "myThirdChart" , 650, 430, "chart-3", "json",$jeC);
+    $columnChartE = new FusionCharts("doughnut3d", "myFourChart" , 650, 430, "chart-4", "json",$jeE);
    
     $columnChartV->render();
     $columnChartP->render();
@@ -24,21 +24,27 @@
 
 ?>
 
-<center>
-    <div class="total"> 
-        <span>Ventas Totales</span> 
-        <?php 
-            echo $jeT; 
-        ?>
-    </div>
+<center> 
+        <div class="contenedor">
+            <div>
+            <h2 style="background-color:whitesmoke">Ventas Totales</h2>
+                
+                <?php 
+                    echo "$".$jeT; 
+                ?>   
+            </div>  
+        </div>
 </center>
 
-    <div id="chart-1">Chart will render here! Hola</div>
-    <div id="chart-2"> Chart 2 </div>    
-    <div id="chart-3"> Chart 3 </div>  
-    <div id="chart-4"> Chart 3 </div>  
-   
+    <div class="container">
+        
+        <div id="chart-1">Chart will render here! Hola</div>
+        <div id="chart-2"> Chart 2 </div>    
+        <div id="chart-3"> Chart 3 </div>  
+        <div id="chart-4"> Chart 3 </div>  
 
+    </div>
+        
 
 
 
