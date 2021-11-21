@@ -18,22 +18,19 @@
 
 <body>
     
-    <header>
-            <nav class="nav">
-                
-                <ul class="nav_links">
-                    <li> 
-                        <a href="#">Dashboard </a> 
+    <header class="header">
+        <nav class="navigation">
+            <a href="#" class="logo nav-link">DataWarehouse</a>
+                <ul class="nav-menu"> 
+                    <li class="nav-menu-item ">
+                        <a href="" class="nav-menu-link nav-link">Dashboard</a>
                     </li>
-                    <li> 
-                        <a href="#">Datos</a>
+                    <li class="nav-menu-item">
+                        <a href="" class="nav-menu-link nav-link">Datos</a>
                     </li>
-                    <li >
-                        <a href="#">Otro</a> 
+                    <li class="nav-menu-item">
+                        <a href="" class="nav-menu-link nav-link">Ingresar Datos</a>
                     </li>
                 </ul>
             </nav>
-
-        <div class="clearfix"> </div>
-
     </header>
