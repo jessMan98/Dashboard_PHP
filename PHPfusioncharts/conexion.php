@@ -1,5 +1,5 @@
 <?php
-    //Parámetros de coneción
+    //Parámetros de conexión
     $conn = mysqli_connect(
         "127.0.01",
         "root",
