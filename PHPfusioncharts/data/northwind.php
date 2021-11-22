@@ -189,8 +189,6 @@ class Northwind{
         $query = mysqli_query($cnx, "SELECT *FROM pedido LIMIT 23");
         return $query;
     }
-
-
 }
 
 ?>
