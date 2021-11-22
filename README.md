@@ -11,9 +11,9 @@ ___
 Libreria utilizada para la creacion de gráficas en [PHP](https://www.fusioncharts.com/php-charts "fusionCharts").
 
 ## About me
-:man_technologist: Jesus Manuel Aleman G onzalez.
+:man_technologist: Jesús Manuel Alemán González.
 
-_Ing. Informática_
+ _Ing. Informática_
 
 
 
