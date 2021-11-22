@@ -26,7 +26,7 @@
                         <a href="index.php" class="nav-menu-link nav-link">Dashboard</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="" class="nav-menu-link nav-link">Update Data</a>
+                        <a href="show_data.php" class="nav-menu-link nav-link">Datos</a>
                     </li>
                     <li class="nav-menu-item">
                         <a href="https://github.com/jessMan98/Dashboard_php" class="nav-menu-link nav-link">Github</a>

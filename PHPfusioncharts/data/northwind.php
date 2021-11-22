@@ -154,6 +154,32 @@ class Northwind{
         $r =  mysqli_fetch_array($query);
         return $r['TOTAL'];
     }
+
+    function show_categoria($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM categoria");
+        return $query;
+    }
+
+    function show_cliente($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM cliente");
+        return $query;
+    }
+
+    function show_empleado($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM empleado");
+        return $query;
+    }
+
+    function show_estado($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM estado");
+        return $query;
+    }
+
+    function show_producto($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM producto");
+        return $query;
+    }
+
 }
 
 ?>
