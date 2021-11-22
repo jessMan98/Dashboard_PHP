@@ -180,6 +180,17 @@ class Northwind{
         return $query;
     }
 
+    function show_partida($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM partida LIMIT 23");
+        return $query;
+    }
+
+    function show_pedido($cnx){
+        $query = mysqli_query($cnx, "SELECT *FROM pedido LIMIT 23");
+        return $query;
+    }
+
+
 }
 
 ?>
