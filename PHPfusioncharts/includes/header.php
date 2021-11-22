@@ -29,6 +29,9 @@
                         <a href="" class="nav-menu-link nav-link">Update Data</a>
                     </li>
                     <li class="nav-menu-item">
+                        <a href="https://github.com/jessMan98/Dashboard_php" class="nav-menu-link nav-link">Github</a>
+                    </li>
+                    <li class="nav-menu-item">
                         <img src="logo.jpg" alt="CUCEI">
                     </li>
                 </ul>

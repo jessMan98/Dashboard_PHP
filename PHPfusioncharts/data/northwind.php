@@ -154,7 +154,6 @@ class Northwind{
         $r =  mysqli_fetch_array($query);
         return $r['TOTAL'];
     }
-
 }
 
 ?>

@@ -2,7 +2,7 @@
     include('includes/header.php');
     include('conexion.php');
     include('fusioncharts/fusioncharts-wrapper/fusioncharts.php');
-    include('vistas/northwind.php');
+    include('data/northwind.php');
 
     $obj = new Northwind();
 
@@ -25,15 +25,16 @@
 ?>
 
 <center> 
-        <div class="contenedor">
-            <div>
-            <h2 style="background-color:whitesmoke">Ventas Totales</h2>
-                
-                <?php 
-                    echo "$".$jeT; 
-                ?>   
-            </div>  
-        </div>
+    <div class="contenedor">
+        <div>
+        <h2 style="background-color:whitesmoke">Ventas Totales</h2>
+            
+            <?php 
+                $number = number_format($jeT);
+                echo "$".$number;
+            ?>   
+        </div>  
+    </div>
 </center>
 
     <div class="container">
