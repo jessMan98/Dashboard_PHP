@@ -7,7 +7,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,13 +21,13 @@
 
 DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `categoria` (
   `categoria` varchar(50) NOT NULL,
   `id_categoria` int NOT NULL,
   PRIMARY KEY (`id_categoria`),
   UNIQUE KEY `uk_categoria` (`categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `cliente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `cliente` (
   `id_cliente` int NOT NULL,
   `nom_cliente` varchar(30) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE `cliente` (
   UNIQUE KEY `uk_cliente` (`nom_cliente`),
   KEY `fk_estado` (`clave_estado`),
   CONSTRAINT `fk_estado` FOREIGN KEY (`clave_estado`) REFERENCES `estado` (`clave_estado`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,13 +74,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `empleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `empleado` (
   `id_empleado` int NOT NULL,
   `nom_empleado` varchar(30) NOT NULL,
   PRIMARY KEY (`id_empleado`),
   UNIQUE KEY `uk_empleado` (`nom_empleado`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,13 +99,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `estado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `estado` (
   `clave_estado` char(2) NOT NULL,
   `nom_estado` varchar(30) NOT NULL,
   PRIMARY KEY (`clave_estado`),
   UNIQUE KEY `uk_estado` (`nom_estado`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +124,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `partida`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `partida` (
   `num_pedido` varchar(15) NOT NULL,
   `id_producto` int NOT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE `partida` (
   KEY `fk_producto` (`id_producto`),
   CONSTRAINT `fk_pedido` FOREIGN KEY (`num_pedido`) REFERENCES `pedido` (`num_pedido`),
   CONSTRAINT `fk_producto` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +152,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `pedido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `pedido` (
   `num_pedido` varchar(15) NOT NULL,
   `id_pedido` int NOT NULL,
@@ -164,7 +164,7 @@ CREATE TABLE `pedido` (
   KEY `fk_empleado` (`id_empleado`),
   CONSTRAINT `fk_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`),
   CONSTRAINT `fk_empleado` FOREIGN KEY (`id_empleado`) REFERENCES `empleado` (`id_empleado`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -183,7 +183,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `producto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `producto` (
   `id_producto` int NOT NULL,
   `nom_producto` varchar(50) NOT NULL,
@@ -192,7 +192,7 @@ CREATE TABLE `producto` (
   UNIQUE KEY `uk_producto` (`nom_producto`),
   KEY `fk_categoria` (`id_categoria`),
   CONSTRAINT `fk_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -212,7 +212,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `top_productos`;
 /*!50001 DROP VIEW IF EXISTS `top_productos`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `top_productos` AS SELECT 
  1 AS `nom_producto`,
  1 AS `Ventas`*/;
@@ -225,7 +225,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `top_vendedores`;
 /*!50001 DROP VIEW IF EXISTS `top_vendedores`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `top_vendedores` AS SELECT 
  1 AS `nom_empleado`,
  1 AS `Ventas`*/;
@@ -238,7 +238,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `ventas_por_compañia`;
 /*!50001 DROP VIEW IF EXISTS `ventas_por_compañia`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `ventas_por_compañia` AS SELECT 
  1 AS `nom_cliente`,
  1 AS `Ventas`*/;
@@ -251,7 +251,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `ventas_por_estado`;
 /*!50001 DROP VIEW IF EXISTS `ventas_por_estado`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `ventas_por_estado` AS SELECT 
  1 AS `clave_estado`,
  1 AS `Ventas`*/;
@@ -264,7 +264,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `ventas_totales`;
 /*!50001 DROP VIEW IF EXISTS `ventas_totales`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `ventas_totales` AS SELECT 
  1 AS `TOTAL`*/;
 SET character_set_client = @saved_cs_client;
@@ -277,9 +277,9 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `top_productos` AS select `PV`.`nom_producto` AS `nom_producto`,`PV`.`Ventas` AS `Ventas` from (select `PO`.`nom_producto` AS `nom_producto`,sum(`PA`.`ventas`) AS `Ventas` from (`partida` `PA` join `producto` `PO` on((`PA`.`id_producto` = `PO`.`id_producto`))) group by `PO`.`nom_producto` order by `Ventas` desc) `PV` limit 0,5 */;
@@ -295,9 +295,9 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `top_vendedores` AS select `EV`.`nom_empleado` AS `nom_empleado`,`EV`.`Ventas` AS `Ventas` from (select `EP`.`nom_empleado` AS `nom_empleado`,sum(`P`.`ventas`) AS `Ventas` from (`partida` `P` join (select `E`.`nom_empleado` AS `nom_empleado`,`P`.`num_pedido` AS `num_pedido` from (`pedido` `P` join `empleado` `E` on((`P`.`id_empleado` = `E`.`id_empleado`)))) `EP` on((`P`.`num_pedido` = `EP`.`num_pedido`))) group by `EP`.`nom_empleado` order by `Ventas` desc) `EV` limit 0,5 */;
@@ -313,9 +313,9 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `ventas_por_compañia` AS select `VC`.`nom_cliente` AS `nom_cliente`,`VC`.`Ventas` AS `Ventas` from (select `CP`.`nom_cliente` AS `nom_cliente`,sum(`P`.`ventas`) AS `Ventas` from (`partida` `P` join (select `C`.`nom_cliente` AS `nom_cliente`,`P`.`num_pedido` AS `num_pedido` from (`cliente` `C` join `pedido` `P` on((`C`.`id_cliente` = `P`.`id_cliente`)))) `CP` on((`P`.`num_pedido` = `CP`.`num_pedido`))) group by `CP`.`nom_cliente`) `VC` */;
@@ -331,9 +331,9 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `ventas_por_estado` AS select `CP`.`clave_estado` AS `clave_estado`,sum(`PA`.`ventas`) AS `Ventas` from (`partida` `PA` join (select `P`.`num_pedido` AS `num_pedido`,`C`.`clave_estado` AS `clave_estado` from (`cliente` `C` join `pedido` `P` on((`C`.`id_cliente` = `P`.`id_cliente`)))) `CP` on((`PA`.`num_pedido` = `CP`.`num_pedido`))) group by `CP`.`clave_estado` */;
@@ -349,9 +349,9 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `ventas_totales` AS select sum(`partida`.`ventas`) AS `TOTAL` from `partida` */;
