@@ -10,7 +10,8 @@ ___
 ## FusionCharts.js
 Libreria utilizada para la creacion de gráficas en [PHP](https://www.fusioncharts.com/php-charts "fusionCharts").
 ___ 
-url de la [página](https://datawarehuse.000webhostapp.com/)
+## Visualizaciòn de la pagina en:
+* [ver página](https://datawarehuse.000webhostapp.com/)
 
 ## About me
 :man_technologist: Jesús Manuel Alemán González.
